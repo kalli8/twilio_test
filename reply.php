@@ -1,22 +1,7 @@
 <?php
- 
-    // make an associative array of senders we know, indexed by phone number
-    $people = array(
-       "+17033444899" => "Kalli",
-        "+16164321090" => "Michael",
-        "+12154311593" => "Miguel",
-    );
- 
-    // if the sender is known, then greet them by name
-    // otherwise, consider them just another monkey
-    if(!$name = $people[$_REQUEST['From']]) {
-        $name = "Monkey";
-    }
- 
-    // now greet the sender
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 <Response>
-    <Message><?php echo $name ?>, thanks for the message!</Message>
+    <Message>Hello, Mobile Monkey</Message>
 </Response>
